@@ -1,0 +1,48 @@
+:root{
+    margin: 0 auto;
+    width: 1126px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.adjustDivs{
+    margin: auto;
+    padding: 2%;
+    font-size: 25px;
+}
+
+.adjustInputs{
+    color: var(--font_color);
+    font-family: 'IBM BIOS', monospace;
+    font-size: 20px;
+    background-color: var(--background);
+    border: 2px solid var(--font_color);
+}
+
+.adjustInputs:focus{
+    outline: none;
+}
+
+#titleIncrease{
+    font-size: 65px;
+    margin: auto;
+    padding: 5%;
+}
+
+#garIncrease{
+    font-size: 35px;
+}
+
+#adjustButton{
+    color: var(--font_color);
+    font-family: 'IBM BIOS', monospace;
+    font-size: 20px;
+    background-color: var(--background);
+    border: 2px solid var(--font_color);
+    padding: 1%;
+}
+
+#adjustButton:hover{
+    color: var(--background);
+    background-color: var(--font_color);
+}
