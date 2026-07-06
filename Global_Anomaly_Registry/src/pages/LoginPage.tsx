@@ -1,4 +1,5 @@
 import './pageStyling/LoginPage.css';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function LoginPage() {
@@ -6,18 +7,15 @@ function LoginPage() {
     "LF_GUARD892" : "D_Luna$cat12"
   };
 
+  const go_to_home = useNavigate();
   const [guardID, SetguardID] = useState("");
   const [password, Setpassword] = useState("");
 
   function confirmLogin(){
     if (guardID in approvedUsers){
       if (password === approvedUsers[guardID]){
-        console.log("User: " + guardID);
-        console.log("Pwd: " + password);
-        console.log("IN THE SYSTEM!");
+        go_to_home("/home");
       }
-    } else if (!(guardID in approvedUsers)){
-      console.log("NOT IN SYSTEM!");
     }
   };
 
