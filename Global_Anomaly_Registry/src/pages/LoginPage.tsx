@@ -2,7 +2,11 @@ import './pageStyling/LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-function LoginPage() {
+interface LoginPageProps{
+  approveUser: (is_user: boolean) => void;
+}
+
+function LoginPage({approveUser}: LoginPageProps) {
   const approvedUsers: Record<string, string> = {
     "LF_GUARD892" : "D_Luna$cat12"
   };
@@ -14,6 +18,8 @@ function LoginPage() {
   function confirmLogin(){
     if (guardID in approvedUsers){
       if (password === approvedUsers[guardID]){
+        console.log('SUCCESS');
+        approveUser(true);
         go_to_home("/home");
       }
     }
