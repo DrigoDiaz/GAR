@@ -55,15 +55,3 @@ body{
     color: var(--background);
     background-color: var(--font_color);
 }
-
-.oldschoolEffect{
-    height: 0;
-    overflow: hidden;
-    animation: slow_reveal 10s steps(18) forwards;
-}
-
-@keyframes slow_reveal{
-    to {
-        height: 100vh;
-    }
-}

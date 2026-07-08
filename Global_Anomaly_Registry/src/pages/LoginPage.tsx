@@ -1,4 +1,5 @@
 import './pageStyling/LoginPage.css';
+import './pageStyling/sharedEffects.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 

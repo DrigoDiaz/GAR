@@ -1,11 +1,12 @@
 import './pageStyling/HomePage.css';
+import './pageStyling/sharedEffects.css';
 
 function HomePage() {
   return (
     <>
-      <div>
+      <div className='oldschoolEffect'>
         <header>
-            <h1><u>Hello World</u></h1>
+          <h1><u>Home Page</u></h1>
         </header>
       </div>
     </>
