@@ -1,0 +1,21 @@
+#NavButtons{
+    color: var(--font_color);
+    font-family: 'IBM BIOS', monospace;
+    font-size: 25px;
+    background-color: var(--background);
+    border-bottom: 4px solid var(--font_color);
+    padding: 1%;
+}
+
+.sharedTabs{
+    color: var(--font_color);
+    font-family: 'IBM BIOS', monospace;
+    font-size: 25px;
+    background-color: var(--background);
+    padding: 1%;
+}
+
+#personalButton{
+    border: 2px solid black;
+    border-right: 5px solid var(--font_color);
+}

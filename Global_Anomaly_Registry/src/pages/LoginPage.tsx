@@ -1,5 +1,5 @@
-import './pageStyling/LoginPage.css';
-import './pageStyling/sharedEffects.css';
+import '../pageStyling/LoginPage.css';
+import '../pageStyling/sharedEffects.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -28,7 +28,7 @@ function LoginPage({approveUser}: LoginPageProps) {
 
   return (
     <>
-      <div className='oldschoolEffect'>
+      <div className='oldschoolEffect' id='setBody'>
         <header>
             <h1 id='titleIncrease'><u>G.A.R</u></h1>
             <p id='garIncrease'><i>Global.Anomaly.Registry</i></p>

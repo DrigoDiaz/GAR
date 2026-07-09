@@ -1,7 +1,6 @@
-body{
+#setBody{
     margin: 0 auto;
     width: 1126px;
-    max-width: 100%;
     text-align: center;
 }
 

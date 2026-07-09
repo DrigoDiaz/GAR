@@ -1,12 +1,14 @@
-import './pageStyling/HomePage.css';
-import './pageStyling/sharedEffects.css';
+import '../pageStyling/HomePage.css';
+import '../pageStyling/sharedEffects.css';
+import TopNavBar from '../components/TopNavBar';
+
 
 function HomePage() {
   return (
     <>
       <div className='oldschoolEffect'>
         <header>
-          <h1><u>Home Page</u></h1>
+          <TopNavBar></TopNavBar>
         </header>
       </div>
     </>
