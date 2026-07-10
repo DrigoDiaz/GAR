@@ -5,10 +5,18 @@ function TopNavBar(){
     return (
         <>
             <div id='NavButtons'>
-                <nav>
-                    <button className="sharedTabs" id="personalButton">Personal</button>
-                    <button className="sharedTabs">Documents</button>
-                    <button className="sharedTabs" >Help</button>
+                <nav id='navLayout'>
+                    <div className='divButtonLayout'>
+                        <button className="sharedTabs buttonLayout">Personal</button>
+                    </div>
+
+                    <div className='divButtonLayout' id='midDivLayout'>
+                        <button className="sharedTabs buttonLayout">Documents</button>
+                    </div>
+
+                    <div className='divButtonLayout'>
+                        <button className="sharedTabs buttonLayout">Help</button>
+                    </div>
                 </nav>
             </div>
         </>

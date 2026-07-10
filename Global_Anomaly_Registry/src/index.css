@@ -13,4 +13,9 @@
   color: var(--font_color);
   font-family: "IBM BIOS", monospace;
 }
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
  
