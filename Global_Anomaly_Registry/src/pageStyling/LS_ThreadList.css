@@ -1,0 +1,20 @@
+.generatedDivs{
+    width: 100%;
+    border-bottom: 4px solid var(--font_color);
+}
+
+.alignItems{
+    margin-left: 2%;
+    color: var(--font_color);
+    background-color: var(--background);
+    font-family: 'IBM BIOS', monospace;
+    border: 1px solid black;
+    max-width: 100%;
+    font-size: 18px;
+    padding: 3%;
+    max-width: 100%;
+}
+
+.alignItems:hover{
+    text-decoration: underline;
+}

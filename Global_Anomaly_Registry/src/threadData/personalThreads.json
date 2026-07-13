@@ -2,11 +2,18 @@
     {
         "id": 1,
         "title" : "Test 1",
-        "message" : "Hopefully this displays" 
+        "message" : "Hopefully this displays",
+        "status" : "Unread" 
     },
     {
         "id" : 2,
         "title" : "Test 2",
-        "message" : "Will display as well"
+        "message" : "Will display as well",
+        "status" : "Unread"
+    },{
+        "id" : 3,
+        "title" : "Test 3",
+        "message" : "Should display 3rd",
+        "status" : "Unread"
     }
 ]

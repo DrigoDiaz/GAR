@@ -19,7 +19,6 @@ function LoginPage({approveUser}: LoginPageProps) {
   function confirmLogin(){
     if (guardID in approvedUsers){
       if (password === approvedUsers[guardID]){
-        console.log('SUCCESS');
         approveUser(true);
         go_to_home("/home");
       }

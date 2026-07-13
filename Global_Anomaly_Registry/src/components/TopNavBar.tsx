@@ -7,15 +7,15 @@ function TopNavBar(){
             <div id='NavButtons'>
                 <nav id='navLayout'>
                     <div className='divButtonLayout'>
-                        <button className="sharedTabs buttonLayout">Personal</button>
+                        <button type="button" className="sharedTabs buttonLayout">Personal</button>
                     </div>
 
                     <div className='divButtonLayout' id='midDivLayout'>
-                        <button className="sharedTabs buttonLayout">Documents</button>
+                        <button type="button" className="sharedTabs buttonLayout">Documents</button>
                     </div>
 
                     <div className='divButtonLayout'>
-                        <button className="sharedTabs buttonLayout">Help</button>
+                        <button type="button" className="sharedTabs buttonLayout">Help</button>
                     </div>
                 </nav>
             </div>

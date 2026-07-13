@@ -5,8 +5,12 @@ import personalThreads from '../threadData/personalThreads.json';
 function LS_ThreadList(){
     return (
         <>
-            <div>
-                <p>test a</p>
+            <div id='showBorder'>
+                {personalThreads.map((thread) => (
+                    <div className="generatedDivs" key={thread.id}>
+                        <button type="button" className='alignItems'>{thread.title}</button>
+                    </div>
+                ))}
             </div>
         </>
     )
