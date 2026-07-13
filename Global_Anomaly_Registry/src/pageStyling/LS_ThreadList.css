@@ -1,6 +1,9 @@
 .generatedDivs{
     width: 100%;
     border-bottom: 4px solid var(--font_color);
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
 }
 
 .alignItems{
@@ -8,13 +11,37 @@
     color: var(--font_color);
     background-color: var(--background);
     font-family: 'IBM BIOS', monospace;
+    text-align: left;
     border: 1px solid black;
-    max-width: 100%;
     font-size: 18px;
-    padding: 3%;
-    max-width: 100%;
+    padding: 6%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .alignItems:hover{
     text-decoration: underline;
+}
+
+.displayUnread{
+    text-align: right;
+    margin-right: 10%;
+}
+
+#scrollBar{
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+#scrollBar::-webkit-scrollbar{
+    background: black;
+    border: 2px solid var(--font_color);
+    width: 15px;
+}
+
+#scrollBar::-webkit-scrollbar-thumb{
+    border: 1px solid transparent;
+    background: var(--font_color);
 }

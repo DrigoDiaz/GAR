@@ -3,17 +3,17 @@
         "id": 1,
         "title" : "Test 1",
         "message" : "Hopefully this displays",
-        "status" : "Unread" 
+        "status" : "UNREAD" 
     },
     {
         "id" : 2,
-        "title" : "Test 2",
+        "title" : "Test 2: Electric Boogaloo",
         "message" : "Will display as well",
-        "status" : "Unread"
+        "status" : "UNREAD"
     },{
         "id" : 3,
-        "title" : "Test 3",
+        "title" : "Test 3: Shocked",
         "message" : "Should display 3rd",
-        "status" : "Unread"
+        "status" : "READ"
     }
 ]
