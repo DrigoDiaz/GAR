@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "title" : "Entry 1",
+        "message" : "Entry 1 will be something",
+        "status" : "READ" 
+    },
+    {
+        "id" : 2,
+        "title" : "Entry 2",
+        "message" : "Entry 2 will be something else",
+        "status" : "READ"
+    },{
+        "id" : 3,
+        "title" : "Entry 7",
+        "message" : "Testing 123",
+        "status" : "READ"
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "title" : "Security",
+        "message" : "abc",
+        "status" : "READ" 
+    },
+    {
+        "id" : 2,
+        "title" : "Classification",
+        "message" : "def",
+        "status" : "READ"
+    },{
+        "id" : 3,
+        "title" : "Tutorial",
+        "message" : "ghi",
+        "status" : "READ"
+    }
+]

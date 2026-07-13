@@ -8,7 +8,9 @@ import { useState } from 'react';
 
 function HomePage() {
   const PERSONAL: string = "PERSONAL";
+  const MOST_RECENT: number = 0;
   const [tabId, setTab] = useState(PERSONAL);
+  const [threadId, setThread] = useState(MOST_RECENT);
 
   return (
     <>
@@ -19,7 +21,7 @@ function HomePage() {
 
         <main id='setMain'>
           <section id='sectionBorder'>
-            <LS_ThreadList></LS_ThreadList>
+            <LS_ThreadList selectedTab={tabId} setSelectedThread={setThread}></LS_ThreadList>
           </section>
 
           <aside id='asideBorder'>
