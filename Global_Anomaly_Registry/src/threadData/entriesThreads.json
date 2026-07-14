@@ -3,17 +3,23 @@
         "id": 1,
         "title" : "Entry 1",
         "message" : "Entry 1 will be something",
-        "status" : "READ" 
+        "status" : "READ",
+        "classification" : "A",
+        "protocol": "PENDING"
     },
     {
         "id" : 2,
         "title" : "Entry 2",
         "message" : "Entry 2 will be something else",
-        "status" : "READ"
+        "status" : "READ",
+        "classification" : "B",
+        "protocol": "Leave Area"
     },{
         "id" : 3,
         "title" : "Entry 7",
         "message" : "Testing 123",
-        "status" : "READ"
+        "status" : "READ",
+        "classification" : "C",
+        "protocol": "Pray?"
     }
 ]
