@@ -1,28 +1,18 @@
 import '../pageStyling/sharedEffects.css';
 import '../pageStyling/LS_ThreadList.css';
 import { useEffect, useState } from 'react';
+import type { Thread } from '../customTypes/ThreadType';
+import { PERSONAL, DOCUMENTS, HELP } from '../pages/HomePage';
 
 const jsonThreads = import.meta.glob("../threadData/*.json");
 const UNREAD: string = "UNREAD";
-const PERSONAL: string = "PERSONAL";
-const DOCUMENTS: string = "DOCUMENTS";
-const HELP: string = "HELP";
 let currentThread = "";
 
 // Define Props for ThreadList Component Function
 interface ThreadListProps{
     selectedTab: string;
-    setSelectedThread: (current_Tab: number) => void;
-}
-
-// Define ThreadList Type with required & optional fields
-interface ThreadList{
-    id: number;
-    title: string;
-    message: string;
-    status: string;
-    classification?: string;
-    protocol?: string;
+    setSelectedThreadID: (current_Tab: number) => void;
+    cur_threadList: (threads: Thread[]) => void;
 }
 
 // Async function to load one of the local json files. Used to show current thread list.
@@ -33,13 +23,13 @@ async function thread_load(json_path: string){
         throw new Error("Thread wasn't found.")
     }
 
-    const load_object = await json_loader() as {default: ThreadList[]};
+    const load_object = await json_loader() as {default: Thread[]};
     return load_object.default;
 }
 
-
-function LS_ThreadList({selectedTab, setSelectedThread}: ThreadListProps){
-    const [threadList, setThreadList] = useState<ThreadList[]>([]);
+// Function that keeps track of current Thread List that is selected & loads it
+function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList}: ThreadListProps){
+    const [threadList, setThreadList] = useState<Thread[]>([]);
 
     if (selectedTab === PERSONAL){
         currentThread = '../threadData/personalThreads.json';
@@ -64,7 +54,8 @@ function LS_ThreadList({selectedTab, setSelectedThread}: ThreadListProps){
                 {threadList.map((thread) => (
                     <div className="generatedDivs" key={thread.id}>
                         <button type="button" className='alignItems' onClick={() => {
-                            setSelectedThread(thread.id);
+                            setSelectedThreadID(thread.id);
+                            cur_threadList(threadList);
                         }}>{thread.title}</button>
 
                         {thread.status === UNREAD && (
