@@ -2,17 +2,20 @@
     {
         "id": 1,
         "title" : "Security",
+        "file_title": "setting test 3",
         "message" : "abc",
         "status" : "READ" 
     },
     {
         "id" : 2,
         "title" : "Classification",
+        "file_title": "setting test 2",
         "message" : "def",
         "status" : "READ"
     },{
         "id" : 3,
         "title" : "Tutorial",
+        "file_title": "setting test 1",
         "message" : "ghi",
         "status" : "READ"
     }

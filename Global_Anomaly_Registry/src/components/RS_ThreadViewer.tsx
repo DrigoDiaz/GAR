@@ -21,8 +21,8 @@ function RS_ThreadViewer({loadedThread, selectedThreadID, tabType}: ThreadViewer
             return (
                 <>
                     <div className='adjustText'>
-                        <p>PERSONAL THREAD:</p>
-                        <p>{foundThread.title}</p>
+                        <h3>{foundThread.title}</h3>
+                        <p>{foundThread.date}</p>
                         <p>{foundThread.message}</p>
                     </div>
                 </>
