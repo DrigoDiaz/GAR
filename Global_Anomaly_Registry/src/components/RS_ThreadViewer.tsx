@@ -1,17 +1,18 @@
 import '../pageStyling/sharedEffects.css';
 import '../pageStyling/RS_ThreadViewer.css';
-import type {Thread } from '../customTypes/ThreadType';
+import type { Thread } from '../customTypes/ThreadType';
 import { PERSONAL, DOCUMENTS, HELP } from '../pages/HomePage';
 
-let currentThreadID = 0;
+let currentThreadID: number = 0;
 
 interface ThreadViewerProps{
     loadedThread: Thread[];
     selectedThreadID: number;
     tabType: string;
+    displayMessage: string;
 }
 
-function RS_ThreadViewer({loadedThread, selectedThreadID, tabType}: ThreadViewerProps){
+function RS_ThreadViewer({loadedThread, selectedThreadID, tabType, displayMessage}: ThreadViewerProps){
     currentThreadID = selectedThreadID;
 
     const foundThread = loadedThread.find(thread => thread.id === currentThreadID);
@@ -23,7 +24,7 @@ function RS_ThreadViewer({loadedThread, selectedThreadID, tabType}: ThreadViewer
                     <div className='adjustText'>
                         <h3>{foundThread.title}</h3>
                         <p>{foundThread.date}</p>
-                        <p>{foundThread.message}</p>
+                        <p>{displayMessage}</p>
                     </div>
                 </>
             )

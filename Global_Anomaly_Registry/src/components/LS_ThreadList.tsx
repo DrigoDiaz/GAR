@@ -2,7 +2,7 @@ import '../pageStyling/sharedEffects.css';
 import '../pageStyling/LS_ThreadList.css';
 import { useEffect, useState } from 'react';
 import type { Thread } from '../customTypes/ThreadType';
-import { PERSONAL, DOCUMENTS, HELP } from '../pages/HomePage';
+import { PERSONAL, DOCUMENTS, HELP, appendFileName, loadTxt, currentTxtFile } from '../pages/HomePage';
 
 const jsonThreads = import.meta.glob("../threadData/*.json");
 const UNREAD: string = "UNREAD";
@@ -13,13 +13,14 @@ interface ThreadListProps{
     selectedTab: string;
     setSelectedThreadID: (current_Tab: number) => void;
     cur_threadList: (threads: Thread[]) => void;
+    updateMsg: (file_path: string) => void;
 }
 
 // Async function to load one of the local json files. Used to show current thread list.
 async function thread_load(json_path: string){
     const json_loader = jsonThreads[json_path];
 
-    if (!jsonThreads){
+    if (!json_loader){
         throw new Error("Thread wasn't found.")
     }
 
@@ -28,8 +29,14 @@ async function thread_load(json_path: string){
 }
 
 // Function that keeps track of current Thread List that is selected & loads it
-function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList}: ThreadListProps){
+function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList, updateMsg}: ThreadListProps){
     const [threadList, setThreadList] = useState<Thread[]>([]);
+
+    async function handleLoading(){
+        const txt_response = await loadTxt(currentTxtFile);
+
+        updateMsg(txt_response);
+    }
 
     if (selectedTab === PERSONAL){
         currentThread = '../threadData/personalThreads.json';
@@ -54,6 +61,8 @@ function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList}: Threa
                 {threadList.map((thread) => (
                     <div className="generatedDivs" key={thread.id}>
                         <button type="button" className='alignItems' onClick={() => {
+                            appendFileName(thread.file_title);
+                            handleLoading();
                             setSelectedThreadID(thread.id);
                             cur_threadList(threadList);
                         }}>{thread.title}</button>
