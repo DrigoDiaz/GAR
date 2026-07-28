@@ -2,7 +2,7 @@ import '../pageStyling/sharedEffects.css';
 import '../pageStyling/LS_ThreadList.css';
 import { useEffect, useState } from 'react';
 import type { Thread } from '../customTypes/ThreadType';
-import { PERSONAL, DOCUMENTS, HELP, appendFileName, loadTxt, currentTxtFile } from '../pages/HomePage';
+import { PERSONAL, DOCUMENTS, HELP, NULL_MSG, appendFileName, loadTxt, currentTxtFile } from '../pages/HomePage';
 
 const jsonThreads = import.meta.glob("../threadData/*.json");
 const UNREAD: string = "UNREAD";
@@ -11,8 +11,6 @@ let currentThread = "";
 // Define Props for ThreadList Component Function
 interface ThreadListProps{
     selectedTab: string;
-    setSelectedThreadID: (current_Tab: number) => void;
-    cur_threadList: (threads: Thread[]) => void;
     updateMsg: (file_path: string) => void;
 }
 
@@ -29,7 +27,7 @@ async function thread_load(json_path: string){
 }
 
 // Function that keeps track of current Thread List that is selected & loads it
-function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList, updateMsg}: ThreadListProps){
+function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
     const [threadList, setThreadList] = useState<Thread[]>([]);
 
     async function handleLoading(){
@@ -50,6 +48,7 @@ function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList, update
         async function updateThreads(){
             const thread_data = await thread_load(currentThread);
             setThreadList(thread_data);
+            updateMsg(NULL_MSG);
         }
 
         updateThreads();
@@ -57,14 +56,12 @@ function LS_ThreadList({selectedTab, setSelectedThreadID, cur_threadList, update
 
     return (
         <>
-            <div id='scrollBar'>
+            <div className='scrollBar'>
                 {threadList.map((thread) => (
                     <div className="generatedDivs" key={thread.id}>
                         <button type="button" className='alignItems' onClick={() => {
                             appendFileName(thread.file_title);
                             handleLoading();
-                            setSelectedThreadID(thread.id);
-                            cur_threadList(threadList);
                         }}>{thread.title}</button>
 
                         {thread.status === UNREAD && (

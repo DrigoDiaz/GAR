@@ -1,10 +1,8 @@
----------------------------------------------
-     G.U.A.R.D INTERNAL MESSAGING SYSTEM
----------------------------------------------
+<GIS>
 
-From: ANN PIPER (HUMAN RESOURCES AGENT)
-Date: 8/13/1985
-Subject: Introduction to the G.U.A.R.D Family
+<FROM> From: ANN PIPER (HUMAN RESOURCES AGENT)
+<DATE> Date: 8/13/1985
+<TITLE> Subject: Introduction to the G.U.A.R.D Family
 
 Welcome LUNA FLORES,
 

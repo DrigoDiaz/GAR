@@ -4,6 +4,22 @@
     animation: slow_reveal 10s steps(18) forwards;
 }
 
+.scrollBar{
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.scrollBar::-webkit-scrollbar{
+    background: black;
+    border: 2px solid var(--font_color);
+    width: 15px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb{
+    border: 1px solid transparent;
+    background: var(--font_color);
+}
+
 @keyframes slow_reveal{
     to {
         max-height: 100vh;

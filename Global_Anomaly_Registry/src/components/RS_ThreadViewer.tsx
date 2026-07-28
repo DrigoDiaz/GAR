@@ -1,60 +1,46 @@
 import '../pageStyling/sharedEffects.css';
 import '../pageStyling/RS_ThreadViewer.css';
-import type { Thread } from '../customTypes/ThreadType';
-import { PERSONAL, DOCUMENTS, HELP } from '../pages/HomePage';
+import { NULL_MSG } from '../pages/HomePage';
 
-let currentThreadID: number = 0;
+const GIS: string = "<GIS>";
+const TITLE: string = "<TITLE>";
+const FROM: string = "<FROM>";
+const DATE: string = "<DATE>";
+const CLASSIFCATION: string = "<CLASSIFICATION>";
+const PROTOCAL: string = "<PROTOCAL>";
 
 interface ThreadViewerProps{
-    loadedThread: Thread[];
-    selectedThreadID: number;
-    tabType: string;
     displayMessage: string;
 }
 
-function RS_ThreadViewer({loadedThread, selectedThreadID, tabType, displayMessage}: ThreadViewerProps){
-    currentThreadID = selectedThreadID;
-
-    const foundThread = loadedThread.find(thread => thread.id === currentThreadID);
-
-    if (foundThread){
-        if (tabType === PERSONAL){
-            return (
-                <>
-                    <div className='adjustText'>
-                        <h3>{foundThread.title}</h3>
-                        <p>{foundThread.date}</p>
-                        <p>{displayMessage}</p>
-                    </div>
-                </>
-            )
-        } else if (tabType === DOCUMENTS){
-            return (
-                <>
-                    <div className='adjustText'>
-                        <p>DOCUMENT THREAD:</p>
-                        <p>{foundThread.title}</p>
-                        <p>{foundThread.message}</p>
-                    </div>
-                </>
-            )
-        } else if (tabType === HELP){
-            return (
-                <>
-                    <div className='adjustText'>
-                        <p>HELP THREAD:</p>
-                        <p>{foundThread.title}</p>
-                        <p>{foundThread.message}</p>
-                    </div>
-                </>
-            )
-        }
-    }
+function RS_ThreadViewer({displayMessage}: ThreadViewerProps){
+    const parsedMsg = displayMessage.split('\n').map(line => line.trim());
 
     return (
         <>
-            <div className='adjustText'>
-                <p>Select a thread to open</p>
+            <div className='adjustText scrollBar'>
+                {(parsedMsg.length === 1 && parsedMsg[0] === NULL_MSG) ? 
+                    (<p>Select a thread to open</p>) : 
+                    (parsedMsg.map((cur_line) => {
+                        let trimmed_line: string = cur_line.trim();
+
+                        if (trimmed_line.startsWith(GIS)){
+                            return (
+                                <>
+                                    <div>
+                                        <p>{"-".repeat(40)}</p>
+                                        <p>G.U.A.R.D Internal Systems</p>
+                                        <p>{"-".repeat(40)}</p>
+                                    </div>
+                                </>
+                            )
+                        }
+
+                        return (
+                            <p>{trimmed_line}</p>
+                        )
+                    }))
+                }
             </div>
         </>
     )
