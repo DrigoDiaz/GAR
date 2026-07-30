@@ -34,16 +34,16 @@ function LoginPage({approveUser}: LoginPageProps) {
         </header>
 
         <main>
-            <div className='adjustDivs shiftLeft'>
-              <p>G.U.A.R.D ID:</p>
+            <div className='adjustDivs'>
+              <p className='shiftText'>G.U.A.R.D ID:</p>
               <input type='text' 
                value={guardID}
                onChange={(g_id)=> SetguardID(g_id.target.value)}
               className='adjustInputs'></input>
             </div>
 
-            <div className='adjustDivs shiftLeft'>
-              <p>Password:</p>
+            <div className='adjustDivs'>
+              <p className='shiftText'>Password:</p>
               <input type='password' 
                value={password}
                onChange={(pwd)=> Setpassword(pwd.target.value)}

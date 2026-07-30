@@ -1,17 +1,8 @@
-#setBody{
-    margin: 0 auto;
-    width: 1126px;
-    text-align: center;
-}
-
 .adjustDivs{
     margin: auto;
     padding: 2%;
     font-size: 25px;
-}
-
-.shiftLeft{
-    text-align: left;
+    max-width: min-content;
 }
 
 .adjustInputs{
@@ -31,6 +22,17 @@
     outline: none;
 }
 
+#setBody{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.shiftText{
+    text-align: left;
+}
+
 #titleIncrease{
     font-size: 100px;
     margin: auto;
@@ -44,10 +46,10 @@
 #adjustButton{
     color: var(--font_color);
     font-family: 'IBM BIOS', monospace;
-    font-size: 25px;
+    font-size: 30px;
     background-color: var(--background);
     border: 2px solid var(--font_color);
-    padding: 1%;
+    padding: 10%;
 }
 
 #adjustButton:hover{

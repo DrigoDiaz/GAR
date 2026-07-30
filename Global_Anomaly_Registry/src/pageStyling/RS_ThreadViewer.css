@@ -1,8 +1,32 @@
-.adjustText{
+.centerUnopenedThread{
+    text-align: center;
+}
+
+.adjustGIS{
     text-align: center;
     font-size: 25px;
 }
 
-#showBorder{
-    border: 1px solid white;
+.adjustSINCERELY{
+    line-height: 1.05px;
+}
+
+.adjustEND{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 1%;
+    padding: 0%;
+}
+
+.leftSidedText{
+    text-align: left;
+    margin-left: 2%;
+}
+
+.fontAndLineStyling{
+    line-height: 1.20;
+    font-size: 15px;
 }

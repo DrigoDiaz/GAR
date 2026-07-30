@@ -2,15 +2,12 @@
     display: flex;
 }
 
-#sectionBorder{
+#sectionBorder {
+    flex: 0 0 33.1%;
     border-right: 1px solid var(--font_color);
-    width: 49.8vw;
-    height: 100vh;
 }
 
-#asideBorder{
+#asideBorder {
+    flex: 0 0 66.77%;
     border-left: 4px solid var(--font_color);
-    width: 100vw;
-    height: 100vh;
 }
-
