@@ -5,8 +5,10 @@ import type { Thread } from '../customTypes/ThreadType';
 import { PERSONAL, DOCUMENTS, HELP, NULL_MSG, appendFileName, loadTxt, currentTxtFile } from '../pages/HomePage';
 
 const jsonThreads = import.meta.glob("../threadData/*.json");
+const READ: string = "READ";
 const UNREAD: string = "UNREAD";
 let currentThread = "";
+let readThreads: Thread[] = [];
 
 // Define Props for ThreadList Component Function
 interface ThreadListProps{
@@ -62,10 +64,13 @@ function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
                         <button type="button" className='alignItems' onClick={() => {
                             appendFileName(thread.file_title);
                             handleLoading();
+                            if (thread.status === UNREAD && !readThreads.includes(thread)){
+                                readThreads.push(thread);
+                            }
                         }}>{thread.title}</button>
 
-                        {thread.status === UNREAD && (
-                            <p className='displayUnread'>*UNREAD*</p>
+                        {thread.status === UNREAD && !readThreads.includes(thread) && (
+                            <p className='displayUnread'>*NEW*</p>
                         )}
                     </div>
                 ))}

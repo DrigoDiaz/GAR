@@ -6,6 +6,7 @@
 
 .scrollBar{
     height: calc(100vh - 49.59px);
+    scrollbar-gutter: stable;
     overflow-y: auto;
 }
 

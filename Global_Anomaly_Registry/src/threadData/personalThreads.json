@@ -1,25 +1,22 @@
 [
     {
         "id": 3,
-        "title" : "Test 1",
-        "file_title": "test2",
-        "date": "a",
-        "message" : "Hopefully this displays",
+        "title" : "Time to meet up",
+        "file_title": "meetup_1",
+        "date": "8/13/1985",
         "status" : "UNREAD" 
     },
     {
         "id" : 2,
-        "title" : "Test 2: Electric Boogaloo",
-        "file_title": "test1",
-        "date": "a",
-        "message" : "Will display as well",
+        "title" : "Confirm Information",
+        "file_title": "confirm_info",
+        "date": "8/13/1985",
         "status" : "UNREAD"
     },{
         "id" : 1,
         "title" : "Welcome to G.U.A.R.D",
         "file_title": "welcome",
         "date": "8/13/1985",
-        "message" : "Welcome LUNA FLORES to the G.U.A.R.D Family. \nWe are please to have you join us on our mission to GUARD humanity from the illogical.",
         "status" : "READ"
     }
 ]

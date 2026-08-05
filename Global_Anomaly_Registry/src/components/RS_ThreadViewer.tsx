@@ -30,9 +30,9 @@ function RS_ThreadViewer({displayMessage}: ThreadViewerProps){
                             return (
                                 <>
                                     <div className='adjustGIS'>
-                                        <p>{"-".repeat(42)}</p>
+                                        <p>{"-".repeat(41)}</p>
                                         <p>G.U.A.R.D Internal Systems</p>
-                                        <p>{"-".repeat(42)}</p>
+                                        <p>{"-".repeat(41)}</p>
                                     </div>
                                 </>
                             )
@@ -78,7 +78,7 @@ function RS_ThreadViewer({displayMessage}: ThreadViewerProps){
                         } else if (trimmed_line.startsWith(END)){                            
                             return (
                                 <>
-                                    <p className='adjustEND'>{"-".repeat(42)}</p>
+                                    <p className='adjustEND'>{"-".repeat(41)}</p>
                                 </>
                             )
                         }else if (trimmed_line === BREAK_PARAGRAPH){                            
