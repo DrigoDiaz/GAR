@@ -1,28 +1,11 @@
 [
     {
         "id": 1,
-        "title" : "Entry 1",
-        "file_title": "entry test 3",
-        "message" : "Entry 1 will be something",
-        "status" : "READ",
-        "classification" : "A",
-        "protocol": "PENDING"
-    },
-    {
-        "id" : 2,
-        "title" : "Entry 2",
-        "file_title": "entry test 2",
-        "message" : "Entry 2 will be something else",
-        "status" : "READ",
-        "classification" : "B",
-        "protocol": "Leave Area"
-    },{
-        "id" : 3,
-        "title" : "Entry 7",
-        "file_title": "entry test 1",
-        "message" : "Testing 123",
-        "status" : "READ",
-        "classification" : "C",
-        "protocol": "Pray?"
+        "title" : "Tutorial G.A.R. Entry",
+        "file_title": "tutorial_entry",
+        "date": "8/13/1985",
+        "status" : "UNREAD",
+        "classification" : "N/A",
+        "protocol": "N/A"
     }
 ]

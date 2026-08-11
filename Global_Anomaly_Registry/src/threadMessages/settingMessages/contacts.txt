@@ -1,0 +1,31 @@
+<GIS>
+
+<TITLE> Support Contacts for Employees
+
+Below you will find a list of some important contacts that every employee
+should have access to at all times:
+
+<LIST> Human Resources Department (HR)
+Internal Extension Code - GRD#HR
+<BREAK>
+
+<LIST> Career-Orientation Department (CO)
+
+Internal Extension Code - GRD#CO
+<BREAK>
+
+<LIST> Security Department (SD)
+
+Internal Extension Code - GRD#SD
+<BREAK>
+
+<LIST> Restoration Department (RD)
+
+Internal Extension Code - GRD#RD
+<BREAK>
+
+If you cannot find a contact that you are looking for, please contact
+either the HR Department or if you have been assigned a mentor, ask them
+instead.  
+
+<END>

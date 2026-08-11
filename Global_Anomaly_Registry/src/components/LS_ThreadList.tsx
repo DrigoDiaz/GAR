@@ -5,7 +5,6 @@ import type { Thread } from '../customTypes/ThreadType';
 import { PERSONAL, DOCUMENTS, HELP, NULL_MSG, appendFileName, loadTxt, currentTxtFile } from '../pages/HomePage';
 
 const jsonThreads = import.meta.glob("../threadData/*.json");
-const READ: string = "READ";
 const UNREAD: string = "UNREAD";
 let currentThread = "";
 let readThreads: Thread[] = [];

@@ -1,22 +1,32 @@
 [
     {
-        "id": 1,
-        "title" : "Security",
-        "file_title": "setting test 3",
-        "message" : "abc",
-        "status" : "READ" 
+        "id": 5,
+        "title" : "Careers",
+        "file_title": "careers",
+        "status" : "UNREAD" 
+    },
+    {
+        "id": 4,
+        "title" : "Classifications",
+        "file_title": "classification",
+        "status" : "UNREAD" 
+    },
+    {
+        "id": 3,
+        "title" : "Warnings",
+        "file_title": "warnings",
+        "status" : "UNREAD" 
     },
     {
         "id" : 2,
-        "title" : "Classification",
-        "file_title": "setting test 2",
-        "message" : "def",
-        "status" : "READ"
-    },{
-        "id" : 3,
-        "title" : "Tutorial",
-        "file_title": "setting test 1",
-        "message" : "ghi",
-        "status" : "READ"
+        "title" : "Support Contacts",
+        "file_title": "contacts",
+        "status" : "UNREAD"
+    },
+    {
+        "id" : 1,
+        "title" : "Policies and Code of Conduct",
+        "file_title": "code_of_conduct",
+        "status" : "UNREAD"
     }
 ]

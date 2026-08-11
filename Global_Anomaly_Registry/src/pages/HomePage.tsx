@@ -66,7 +66,7 @@ function HomePage() {
 
           <aside id='asideBorder'>
             <div id='highlight'>
-              <RS_ThreadViewer displayMessage={msg}></RS_ThreadViewer>
+              <RS_ThreadViewer displayMessage={msg} tabTyping={tabId}></RS_ThreadViewer>
             </div>
           </aside>
         </main>

@@ -1,0 +1,23 @@
+<GIS>
+
+<TITLE> [TUTORIAL] GAR-XXX
+<WRITTEN> G.U.A.R.D. User A
+<DATE> Last updated: X/XX/XXXX
+<REVISION> X
+
+
+<CLASSIFICATION> 
+Classification required here.
+
+<STATUS> 
+Status required here.
+<BREAK>
+
+<DESCRIPTION> 
+Description of anomaly will be required here.
+<BREAK>
+
+<PROTOCAL> 
+All possible protocals for the anomaly will be required here.
+
+<END>
