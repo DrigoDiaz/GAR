@@ -1,4 +1,5 @@
-import './pageStyling/LoginPage.css';
+import '../pageStyling/LoginPage.css';
+import '../pageStyling/sharedEffects.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -18,7 +19,6 @@ function LoginPage({approveUser}: LoginPageProps) {
   function confirmLogin(){
     if (guardID in approvedUsers){
       if (password === approvedUsers[guardID]){
-        console.log('SUCCESS');
         approveUser(true);
         go_to_home("/home");
       }
@@ -27,23 +27,23 @@ function LoginPage({approveUser}: LoginPageProps) {
 
   return (
     <>
-      <div className='oldschoolEffect'>
+      <div className='oldschoolEffect' id='setBody'>
         <header>
             <h1 id='titleIncrease'><u>G.A.R</u></h1>
             <p id='garIncrease'><i>Global.Anomaly.Registry</i></p>
         </header>
 
         <main>
-            <div className='adjustDivs shiftLeft'>
-              <p>G.U.A.R.D ID:</p>
+            <div className='adjustDivs'>
+              <p className='shiftText'>G.U.A.R.D ID:</p>
               <input type='text' 
                value={guardID}
                onChange={(g_id)=> SetguardID(g_id.target.value)}
               className='adjustInputs'></input>
             </div>
 
-            <div className='adjustDivs shiftLeft'>
-              <p>Password:</p>
+            <div className='adjustDivs'>
+              <p className='shiftText'>Password:</p>
               <input type='password' 
                value={password}
                onChange={(pwd)=> Setpassword(pwd.target.value)}

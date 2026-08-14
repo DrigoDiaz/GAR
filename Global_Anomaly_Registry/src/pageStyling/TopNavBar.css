@@ -1,0 +1,38 @@
+.sharedTabs{
+    color: var(--font_color);
+    font-family: 'IBM BIOS', monospace;
+    font-size: 25px;
+    background-color: var(--background);
+    padding: 1%;
+}
+
+.divButtonLayout{
+    width: 100vw;
+    padding: 0.5%;
+}
+
+.buttonLayout{
+    border: 1px solid black;
+}
+
+#NavButtons{
+    color: var(--font_color);
+    background-color: var(--background);
+    border-bottom: 4px solid var(--font_color);
+    margin: auto;
+    text-align: center;
+}
+
+#navLayout{
+    display: flex;
+    justify-content: center;
+}
+
+#midDivLayout{
+    border-left: 5px solid var(--font_color);
+    border-right: 5px solid var(--font_color);
+}
+
+.buttonLayout:hover{
+    text-decoration: underline;
+}
