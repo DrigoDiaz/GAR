@@ -2,30 +2,34 @@
 
 <TITLE> Support Contacts for Employees
 
-Below you will find a list of some important contacts that every employee
+Below you will find a list of some important code extensions that every employee
 should have access to at all times:
 
-<LIST> Human Resources Department (HR)
-Internal Extension Code - GRD#HR
+<LIST_TITLE> Human Resources Department (HR)
+<L_I> Internal Extension Code - GRD#HR
+<L_I> External Extension Code - GUARD#HR#EMP
+
 <BREAK>
 
-<LIST> Career-Orientation Department (CO)
+<LIST_TITLE> Career-Orientation Department (CO)
+<L_I> Internal Extension Code - GRD#CO
+<L_I> External Extension Code - GUARD#CO#EMP
 
-Internal Extension Code - GRD#CO
 <BREAK>
 
-<LIST> Security Department (SD)
+<LIST_TITLE> Security Department (SD)
+<L_I> Internal Extension Code - GRD#SD
+<L_I> External Extension Code - GUARD#SD#EMP
 
-Internal Extension Code - GRD#SD
 <BREAK>
 
-<LIST> Restoration Department (RD)
+<LIST_TITLE> Restoration Department (RD)
+<L_I> Internal Extension Code - GRD#RD
+<L_I> External Extension Code - GUARD#RD#EMP
 
-Internal Extension Code - GRD#RD
 <BREAK>
 
-If you cannot find a contact that you are looking for, please contact
-either the HR Department or if you have been assigned a mentor, ask them
-instead.  
+If you cannot find a code extension / contact that you are looking for, please contact
+either the HR Department or your assigned mentor for additional information.
 
 <END>

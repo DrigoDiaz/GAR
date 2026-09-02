@@ -14,7 +14,8 @@ const STATUS: string = "<STATUS>";
 const CLASSIFCATION: string = "<CLASSIFICATION>";
 const DESCRIPTION: string = "<DESCRIPTION>";
 const PROTOCAL: string = "<PROTOCAL>";
-const LIST: string = "<LIST>";
+const LIST_TITLE: string = "<LIST_TITLE>";
+const LIST_ITEM: string = "<L_I>";
 const BREAK: string = "<BREAK>";
 const END: string = "<END>";
 
@@ -140,12 +141,21 @@ function RS_ThreadViewer({displayMessage, tabTyping}: ThreadViewerProps){
                                     </div>
                                 </>
                             )
-                        } else if (trimmed_line.startsWith(LIST)){
-                            trimmed_line = trimmed_line.substring(LIST.length);
+                        } else if (trimmed_line.startsWith(LIST_TITLE)){
+                            trimmed_line = trimmed_line.substring(LIST_TITLE.length);
                             return (
                                 <>
                                     <div>
                                         <h4><u>{trimmed_line}</u>:</h4>
+                                    </div>
+                                </>
+                            )
+                        } else if (trimmed_line.startsWith(LIST_ITEM)){
+                            trimmed_line = trimmed_line.substring(LIST_ITEM.length);
+                            return (
+                                <>
+                                    <div>
+                                        <p>* {trimmed_line}</p>
                                     </div>
                                 </>
                             )

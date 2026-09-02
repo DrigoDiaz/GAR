@@ -21,7 +21,8 @@
     text-overflow: ellipsis;
 }
 
-.alignItems:hover{
+.alignItems:hover,
+.alignItems.active{
     text-decoration: underline;
 }
 

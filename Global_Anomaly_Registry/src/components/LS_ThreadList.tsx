@@ -2,7 +2,7 @@ import '../pageStyling/sharedEffects.css';
 import '../pageStyling/LS_ThreadList.css';
 import { useEffect, useState } from 'react';
 import type { Thread } from '../customTypes/ThreadType';
-import { PERSONAL, DOCUMENTS, HELP, NULL_MSG, appendFileName, loadTxt, currentTxtFile } from '../pages/HomePage';
+import { PERSONAL, DOCUMENTS, HELP, NULL_MSG, appendFileName, loadTxt, currentTxtFile, NULL_ID } from '../pages/HomePage';
 
 const jsonThreads = import.meta.glob("../threadData/*.json");
 const UNREAD: string = "UNREAD";
@@ -30,6 +30,7 @@ async function thread_load(json_path: string){
 // Function that keeps track of current Thread List that is selected & loads it
 function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
     const [threadList, setThreadList] = useState<Thread[]>([]);
+    const [underlineThread, setUnderlinedThread] = useState(NULL_ID);
 
     async function handleLoading(){
         const txt_response = await loadTxt(currentTxtFile);
@@ -50,6 +51,7 @@ function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
             const thread_data = await thread_load(currentThread);
             setThreadList(thread_data);
             updateMsg(NULL_MSG);
+            setUnderlinedThread(NULL_ID);
         }
 
         updateThreads();
@@ -60,7 +62,9 @@ function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
             <div className='scrollBar'>
                 {threadList.map((thread) => (
                     <div className="generatedDivs" key={thread.id}>
-                        <button type="button" className='alignItems' onClick={() => {
+                        <button type="button" className={`alignItems ${underlineThread === thread.id ? "active" : ""}`} 
+                                onClick={() => {
+                            setUnderlinedThread(thread.id);
                             appendFileName(thread.file_title);
                             handleLoading();
                             if (thread.status === UNREAD && !readThreads.includes(thread)){

@@ -33,6 +33,7 @@
     border-right: 5px solid var(--font_color);
 }
 
-.buttonLayout:hover{
+.buttonLayout:hover,
+.buttonLayout.active{
     text-decoration: underline;
 }

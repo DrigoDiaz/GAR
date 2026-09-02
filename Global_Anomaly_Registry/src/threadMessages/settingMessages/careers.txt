@@ -1,0 +1,92 @@
+<GIS>
+
+<TITLE> Careers
+
+Employees are expected to learn and understand all of the available career 
+opportunities that exist within G.U.A.R.D. Below is a list of careers that an employee
+can choose from. Keep in mind that some careers are not shown due to 
+employees current status within the organization. 
+
+If a department is actively looking for new applicants, they
+will send out a message within this platform and place flyers up
+around our facilities. Please keep an eye out for them if they are of interest.
+<BREAK>
+
+<LIST_TITLE> G.U.A.R.D's Main Four
+
+The G.U.A.R.D. Chasers:
+
+G.U.A.R.D. Chasers, or simply known as "Chasers," are the first of the main four
+that an employee can choose to join. Their responibility is to seek & encounter
+anomalies within reported regions. 
+
+Due to the task at hand, the Chasers always have vacant positions open and are
+always accepting new applicants. 
+<BREAK>
+
+The G.U.A.R.D. Resolvers:
+
+G.U.A.R.D. Resolvers or simply known as "Resolvers," are the second of the main four
+that an employee can choose to join. Their responibility is to be 
+the backup of the Chasers and be the ones who try to resolve the anomaly at hand.
+
+Unlike the Chasers whose responibility is simply seeking and reporting anomalies,
+resolvers often have more exposure to anomalies due to having to re-expose themselves
+to test their proposed solutions.
+<BREAK>
+
+The Documentation Team:
+
+The Documentation Team is the third of the main four that an employee
+can choose to join. Their responibility is to document & perserve everything that 
+is reported by any of the career paths.
+
+While seemingly tame compared to the previous two groups. The Documentation Team
+is under high regulation and thus must ensure they are properly documenting all the
+information they receive. Additionally, they are tasked with providing the Resolvers
+with information that is requested from them and/or they believe might help them if
+a possibly connection/similarity is noticed amongst entries.
+<BREAK>
+
+The Clean-Up Team: 
+
+The Clean-Up Team is the fourth and final group of the main four that an employee can
+choose to join. Their responibility is to clean-up the aftermaths of any
+anomalous incidents that have occured.
+
+This group is often the last group to arrive at any given scene. Additionally,
+it is the group that has the least amount of yearly applicants. 
+<BREAK>
+
+<LIST_TITLE> Additionally Career Options
+
+Independent Researchers:
+
+Independent Researchers or simply known as "IR's," are a minor
+subgroup that exists within G.U.A.R.D. that serves to accommodate
+employees who wish to work alone. An IR is expected to fulfill 
+the role of the four main subgroups for every assignment they undertake.
+Amongst all the subgroups, IR's are the least choosen careers but are some of the
+highest paying within G.U.A.R.D.
+<BREAK>
+
+Security Team:
+
+The Security Team is another subgroup that exists within G.U.A.R.D. Their
+responibility is to enforce the rules and safety regulations set forth by G.U.A.R.D 
+and the U.N. A security team member is expected to monitor over the activities of
+the other departments. Additionally they are in charge of ensuring the safety of
+all equipment used within G.U.A.R.D. facilities.
+<BREAK>
+
+Human Resources Team:
+
+The Human Resource Team is the most popular of these subgroups that exist within G.U.A.R.D.
+Their responibility is to help with human and/or workplace related matters. Due to its
+popularity, this department is rarely offering positions. 
+<BREAK>
+
+For further career-orientated information, please refer to the contacts section
+further below in this HELP section and contact the Career-Orientation Department. 
+
+<END>

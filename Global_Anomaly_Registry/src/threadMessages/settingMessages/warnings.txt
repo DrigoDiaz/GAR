@@ -1,0 +1,63 @@
+<GIS>
+
+<TITLE> Anomaly Related Warnings
+
+Employees are expected to know the following three main anomaly warnings in case
+of anomalous incidents occuring within G.U.A.R.D. Facilities. 
+<BREAK>
+
+DISAPPEARANCE:
+
+In certain cases, G.U.A.R.D. experimentation of contained anomalies (or anomalous remnant)
+can result in the sudden disappearance of either anomaly inself or disappearance of G.U.A.R.D 
+personnel and/or property. If such a case happens, please be advised to first procure your nearest
+G.U.A.R.D. protection kit along with your nearest G.U.A.R.D. search and safety kit. Make an
+announcement of the incident under code 'ACT-DIS.'
+
+Once you have the required items, please begin to search around your localized area to see if you
+find anything in regards to the anomaly or G.U.A.R.D. If anything is found, please announce
+your findings via the walkie talkie within your search and safety kit. If nothing is found
+after an hour of searching, please announce code 'DIS-NULL' along with your current location 
+over the walkie talkie and move onto the next area, unless specified otherwised.
+
+Please also remember to pay attention to all transmissions for news of additionally 
+disappearances, warnings, and announcements.
+<BREAK>
+
+OUTBREAK:
+
+In certain cases, G.U.A.R.D. experimentation of contained anomalies (or anomalous remnant)
+can result in the anomaly breaking out of containment. If such a case happens, please immediately
+evacuate the area and if possible try to find a G.U.A.R.D. search and safety kit to announce the
+location of the outbreak. When you make the announcement, make sure to report it as a code 
+'ACT-OUTBREAK.' 
+
+In cases, where the anomaly is lethal, please try your best to create an opportunity to secure containment
+once again. It is not required and we understand everyone will act differently under such extreme
+circumstances. 
+
+Please also remember to pay attention to all transmissions for news of additionally outbreaks,
+warnings, and announcements.
+<BREAK>
+
+DISPLACEMENT:
+
+In certain cases, G.U.A.R.D. experimentation of contained anomalies (or anomalous remnant)
+can result with either reality or time becoming distorted. If such a case happens, please immediately
+evacuate the area (if possible) and try to find a G.U.A.R.D. search and safety kit to announce
+the location of the displacement. When you make the announcement, make sure to report it as a code
+'ACT-DISPLACE.'
+
+In cases, where the employee finds themselves within the displacement, remain calm and
+focus your mind on what you know to be reality, where you belong, and who you are. Remember that 
+under extreme psychological exposure, it is easy to lose touch of yourself. Eventually,
+the displacement should end naturally or by G.U.A.R.D. intervention.
+
+Please also remember to pay attention to all transmissions for news of additionally displacements,
+warnings, and announcements.
+<BREAK>
+
+If you need addtionally information, please contact the HR Department or your assigned mentor.
+
+<END>
+

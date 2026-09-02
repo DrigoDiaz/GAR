@@ -1,0 +1,57 @@
+<GIS>
+
+<TITLE> Classifications
+
+Every employee must be familiar with the G.U.A.R.D. anomaly classification system. This 
+system has three main classification attributes that anomalies can fall under.
+<BREAK>
+
+Anomaly Scale:
+
+The first and most broad classification attribute is known as the 'Anomaly Scale.' What
+this attribute focuses on is the effective influence range an anomaly has. Below you will see
+a list of all possible influence ranges an anomaly can have:
+
+<LIST_TITLE> Possible Anomaly Scaling
+<L_I> Individual Level (IL)
+<L_I> Regional Level (RL)
+<L_I> Global Level (GL)
+<BREAK>
+
+Anomaly Typing:
+
+The second classificattion attribute is known as the 'Anomaly Typing.' What this
+attribute focuses on is the type of anomaly. Below you will see a list of 
+all possible typings an anomaly can have:
+
+<LIST_TITLE> Possible Anomaly Typing
+<L_I> Cognitive (COG)
+<L_I> Physical (PHY)
+<L_I> Temporal (TMP)
+<L_I> Spatial (SPA)
+<BREAK>
+
+Anomaly Class:
+
+The third and final classification is known as the 'Anomaly Class.' What this
+attribute focuses on is the class of the anomaly. Below you will see a list of
+all possible classes an anomaly can be:
+
+<LIST_TITLE> Possible Anomaly Class
+<L_I> Entity (ENT)
+<L_I> Phenomenon (PHEN)
+<BREAK>
+
+Example:
+
+An anomaly with the classification of 'IL-COG-ENT,' would be interpetted as
+an Individual Level Cogntive Anomaly Entity. This classification helps G.U.A.R.D.
+personnel understand the nature and scope of the anomaly to effectively
+determine the appropiate procedures to take.
+<BREAK>
+
+If additional information is required or a new classification is discovered, please
+contact HR or let your assigned mentor know.
+
+<END>
+
