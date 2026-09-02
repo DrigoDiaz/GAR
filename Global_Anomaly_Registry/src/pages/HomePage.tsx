@@ -3,6 +3,7 @@ import '../pageStyling/sharedEffects.css';
 import TopNavBar from '../components/TopNavBar';
 import LS_ThreadList from '../components/LS_ThreadList';
 import RS_ThreadViewer from '../components/RS_ThreadViewer';
+import CommandPrompt from '../components/CommandPrompt';
 import { useState } from 'react';
 
 export const PERSONAL: string = "PERSONAL";

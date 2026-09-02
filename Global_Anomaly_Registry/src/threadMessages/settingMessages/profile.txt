@@ -1,0 +1,36 @@
+<GIS>
+
+<TITLE> Employee Profile
+
+Name: LUNA D. FLORES
+
+Preferred Name: LUNA FLORES
+
+D.O.B: XX/XX/1960
+
+Hire Date: 8/10/1983
+
+Location: North America
+<BREAK>
+
+Employee Level: 1
+
+Current Career: Undeclared
+
+Current Pay: $9 per hour
+
+Sick Leave: 0 hours available
+
+Vacation Leave: 0 hours available
+
+Promotions: 0
+
+Warnings: 0
+<BREAK>
+
+Assigned Mentor: SIMON CRUZER
+
+Peer Comments: N/A
+<BREAK>
+
+<END>
