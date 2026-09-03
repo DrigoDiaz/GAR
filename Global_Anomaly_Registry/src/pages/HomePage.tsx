@@ -55,6 +55,8 @@ function HomePage() {
 
   return (
     <>
+      <CommandPrompt></CommandPrompt>
+
       <div className='oldschoolEffect'>
         <header>
           <TopNavBar setSelectedTab={setTab} resetMsg={setMsg}></TopNavBar>
