@@ -17,12 +17,10 @@ function CommandPrompt(){
 
             typedPhrase += event.key.toLowerCase();
             typedPhrase = typedPhrase.slice(-9);
-            console.log(typedPhrase)
 
             if (typedPhrase === COMMANDPROMPT){
                 setActivated(true);
                 typedPhrase = "";
-                console.log("ACTIVATED");
             }
         };
 
@@ -36,9 +34,16 @@ function CommandPrompt(){
     return (
         <>
             {isActive && (
-                <dialog open id='adjustDialog'>
-                    <div>
-                        <p>testing</p>
+                <dialog open id='adjustDialog' className='oldschoolEffect'>
+                    <div id='setMainDiv'>
+                        <div id='txtPrompt'>
+                            <p>Enter a code:</p>
+                            <input type='text'></input>
+                        </div>
+
+                        <div id='buttonPrompt'>
+                            <button id='closePrompt'>X</button>
+                        </div>
                     </div>
                 </dialog>
             )}

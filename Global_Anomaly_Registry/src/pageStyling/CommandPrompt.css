@@ -1,3 +1,33 @@
 #adjustDialog{
     z-index: 1;
+    width: 50%;
+    height: 30%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--font_color);
+    background-color: black;
+}
+
+#setMainDiv{
+    color: var(--font_color);
+    border: 1px solid var(--font_color);
+    display: flex;
+}
+
+#txtPrompt{
+    flex: 0 0 95%;
+}
+
+#buttonPrompt{
+    flex: 0 0 5%;
+    border: 1px solid white;
+}
+
+#closePrompt{
+    color: var(--font_color);
+    border: 1px solid var(--font_color);
+    background-color: black;
+    font-family: 'IBM BIOS', monospace;
+    height: 75%;
 }
