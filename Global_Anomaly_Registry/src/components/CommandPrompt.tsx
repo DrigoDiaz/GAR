@@ -1,11 +1,12 @@
 import '../pageStyling/sharedEffects.css';
 import '../pageStyling/CommandPrompt.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const COMMANDPROMPT: string = "cmdprompt";
 
 function CommandPrompt(){
     const [isActive, setActivated] = useState(false);
+    const modalRef = useRef<HTMLDialogElement>(null);
 
     useEffect(() => {
         let typedPhrase: string = "";
@@ -20,6 +21,7 @@ function CommandPrompt(){
             console.log(typedPhrase);
 
             if (typedPhrase === COMMANDPROMPT){
+                event.preventDefault();
                 setActivated(true);
                 typedPhrase = "";
             }
@@ -32,10 +34,16 @@ function CommandPrompt(){
         };
     }, []);
 
+    useEffect(() => {
+        if (isActive){
+            modalRef.current?.showModal();
+        }
+    }, [isActive]);
+
     return (
         <>
             {isActive && (
-                <dialog open id='adjustDialog' className='oldschoolEffect'>
+                <dialog ref={modalRef} id='adjustDialog' className='oldschoolEffect'>
                     <div id='setMainDiv'>
                         <div id='txtPromptDiv'>
                             <p>Enter a command:</p>
