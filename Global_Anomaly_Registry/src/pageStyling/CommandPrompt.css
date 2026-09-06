@@ -1,7 +1,7 @@
 #adjustDialog{
     z-index: 1;
     width: 50%;
-    height: 30%;
+    height: 20%;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -11,23 +11,65 @@
 
 #setMainDiv{
     color: var(--font_color);
-    border: 1px solid var(--font_color);
     display: flex;
+    flex-wrap: wrap;
 }
 
-#txtPrompt{
+#txtPromptDiv{
     flex: 0 0 95%;
+    font-size: 20px;
+    padding-bottom: 3%;
 }
 
-#buttonPrompt{
+#inputPrompt{
+    color: var(--font_color);
+    background-color: black;
+    border: 2px solid var(--font_color);
+    font-family: 'IBM BIOS', monospace;
+    font-size: 15px;
+    padding: 1%;
+    width: 100%;
+}
+
+#buttonPromptDiv{
     flex: 0 0 5%;
-    border: 1px solid white;
+    display: flex;
+    justify-content: right;
 }
 
-#closePrompt{
+#enterButtonDiv{
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#closeButtonPrompt{
     color: var(--font_color);
     border: 1px solid var(--font_color);
     background-color: black;
     font-family: 'IBM BIOS', monospace;
-    height: 75%;
+    height: 35px;
+}
+
+#enterButtonPrompt{
+    color: var(--font_color);
+    border: 1px solid var(--font_color);
+    background-color: black;
+    font-family: 'IBM Bios', monospace;
+    font-size: 20px;
+    padding: 1%;
+}
+
+#closeButtonPrompt:hover{
+    color: black;
+    background-color: var(--font_color);
+}
+
+#enterButtonPrompt:hover{
+    color: black;
+    background-color: var(--font_color);
+}
+
+#inputPrompt:focus{
+    outline: none;
 }
