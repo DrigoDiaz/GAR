@@ -4,11 +4,24 @@ import { useEffect, useState, useRef } from 'react';
 
 const COMMANDPROMPT: string = "cmdprompt";
 
-function CommandPrompt(){
+interface CommandPromptProps{
+  currentDate: (curDate: string) => void;
+}
+
+function CommandPrompt({currentDate}: CommandPromptProps){
     const [isActive, setActivated] = useState(false);
     const modalRef = useRef<HTMLDialogElement>(null);
 
+    function closePrompt(){
+        modalRef.current?.close();
+        setActivated(false);
+    }
+
     useEffect(() => {
+        if (isActive){
+            return ;
+        }
+
         let typedPhrase: string = "";
 
         const handlePressedKey = (event: KeyboardEvent) => {
@@ -18,7 +31,6 @@ function CommandPrompt(){
 
             typedPhrase += event.key.toLowerCase();
             typedPhrase = typedPhrase.slice(-9);
-            console.log(typedPhrase);
 
             if (typedPhrase === COMMANDPROMPT){
                 event.preventDefault();
@@ -32,7 +44,7 @@ function CommandPrompt(){
         return () => {
             window.removeEventListener("keydown", handlePressedKey);
         };
-    }, []);
+    }, [isActive]);
 
     useEffect(() => {
         if (isActive){
@@ -43,7 +55,7 @@ function CommandPrompt(){
     return (
         <>
             {isActive && (
-                <dialog ref={modalRef} id='adjustDialog' className='oldschoolEffect'>
+                <dialog ref={modalRef} id='adjustDialog' className='promptAnimation'>
                     <div id='setMainDiv'>
                         <div id='txtPromptDiv'>
                             <p>Enter a command:</p>
@@ -51,7 +63,7 @@ function CommandPrompt(){
                         </div>
 
                         <div id='buttonPromptDiv'>
-                            <button id='closeButtonPrompt'>X</button>
+                            <button id='closeButtonPrompt' onClick={closePrompt}>X</button>
                         </div>
 
                         <div id='enterButtonDiv'>

@@ -16,6 +16,7 @@ const INT_FOLDER_PATH: string = "../threadMessages/";
 const P_MESSAGES: string = "personalMessages/";
 const E_MESSAGES: string = "entryMessages/";
 const S_MESSAGES: string = "settingMessages/";
+let curDate: string = "08/13/1985";
 
 const txtFiles = import.meta.glob("../threadMessages/**/*.txt", {
     query: "?raw", import: "default"
@@ -52,10 +53,11 @@ export async function loadTxt(filePath: string){
 function HomePage() {
   const [tabId, setTab] = useState(PERSONAL);
   const [msg, setMsg] = useState(NULL_MSG);
+  const [currentDay, setDay] = useState(curDate);
 
   return (
     <>
-      <CommandPrompt></CommandPrompt>
+      <CommandPrompt currentDate={setDay}></CommandPrompt>
 
       <div className='oldschoolEffect'>
         <header>
