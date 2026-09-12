@@ -3,9 +3,22 @@ import '../pageStyling/CommandPrompt.css';
 import { useEffect, useState, useRef } from 'react';
 
 const COMMANDPROMPT: string = "cmdprompt";
+const MISC_FILE = "../threadData/misc.json";
+const userInputs = import.meta.glob(MISC_FILE);
 
 interface CommandPromptProps{
   currentDate: (curDate: string) => void;
+}
+
+async function checkInputs(){
+    const promptLoader = userInputs[MISC_FILE];
+
+    if (!promptLoader){
+        throw new Error("File wasn't found");
+    }
+
+    const loadedFile = await promptLoader();
+    return loadedFile.default;
 }
 
 function CommandPrompt({currentDate}: CommandPromptProps){
