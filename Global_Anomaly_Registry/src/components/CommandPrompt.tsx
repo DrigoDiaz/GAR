@@ -1,10 +1,11 @@
 import '../pageStyling/sharedEffects.css';
 import '../pageStyling/CommandPrompt.css';
 import { useEffect, useState, useRef } from 'react';
+import type { Prompt } from '../customTypes/PromptType.tsx';
 
 const COMMANDPROMPT: string = "cmdprompt";
 const MISC_FILE = "../threadData/misc.json";
-const userInputs = import.meta.glob(MISC_FILE);
+const userInputs = import.meta.glob("../threadData/misc.json");
 
 interface CommandPromptProps{
   currentDate: (curDate: string) => void;
@@ -17,18 +18,33 @@ async function checkInputs(){
         throw new Error("File wasn't found");
     }
 
-    const loadedFile = await promptLoader();
+    const loadedFile = await promptLoader() as { default: Prompt[]};
     return loadedFile.default;
 }
 
 function CommandPrompt({currentDate}: CommandPromptProps){
     const [isActive, setActivated] = useState(false);
+    const [givenCommand, setCommand] = useState("");
     const modalRef = useRef<HTMLDialogElement>(null);
 
     function closePrompt(){
         modalRef.current?.close();
         setActivated(false);
     }
+
+    async function handlePrompt(){
+        const promptData = await checkInputs();
+
+        for (const item of promptData){
+            if (item.userPrompt === givenCommand){
+                let dateOnly = givenCommand.split(" ")[1];
+                currentDate(dateOnly);
+                setCommand("");
+                closePrompt();
+                break;
+            }
+    }
+}
 
     useEffect(() => {
         if (isActive){
@@ -72,7 +88,10 @@ function CommandPrompt({currentDate}: CommandPromptProps){
                     <div id='setMainDiv'>
                         <div id='txtPromptDiv'>
                             <p>Enter a command:</p>
-                            <input type='text' id='inputPrompt'></input>
+                            <input type='text'
+                            value={givenCommand}
+                            onChange={(userCommand)=> setCommand(userCommand.target.value)}
+                            id='inputPrompt'></input>
                         </div>
 
                         <div id='buttonPromptDiv'>
@@ -80,7 +99,8 @@ function CommandPrompt({currentDate}: CommandPromptProps){
                         </div>
 
                         <div id='enterButtonDiv'>
-                            <button id='enterButtonPrompt'>Enter</button>
+                            <button id='enterButtonPrompt'
+                            onClick={handlePrompt}>Enter</button>
                         </div>
                     </div>
                 </dialog>
