@@ -1,29 +1,29 @@
 [
     {
         "id": 4,
-        "title" : "Time to meet up",
+        "title" : "TESTING",
         "file_title": "testdate",
-        "date": "8/20/1985",
+        "date": "08/20/1985",
         "status" : "UNREAD" 
     },
     {
         "id": 3,
         "title" : "Time to meet up",
         "file_title": "meetup_1",
-        "date": "8/13/1985",
+        "date": "08/13/1985",
         "status" : "UNREAD" 
     },
     {
         "id" : 2,
         "title" : "Confirm Information",
         "file_title": "confirm_info",
-        "date": "8/13/1985",
+        "date": "08/13/1985",
         "status" : "UNREAD"
     },{
         "id" : 1,
         "title" : "Welcome to G.U.A.R.D",
         "file_title": "welcome",
-        "date": "8/13/1985",
+        "date": "08/13/1985",
         "status" : "UNREAD"
     }
 ]

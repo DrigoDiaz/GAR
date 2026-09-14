@@ -12,6 +12,7 @@ let readThreads: Thread[] = [];
 // Define Props for ThreadList Component Function
 interface ThreadListProps{
     selectedTab: string;
+    currentDate: Date;
     updateMsg: (file_path: string) => void;
 }
 
@@ -28,7 +29,7 @@ async function thread_load(json_path: string){
 }
 
 // Function that keeps track of current Thread List that is selected & loads it
-function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
+function LS_ThreadList({selectedTab, currentDate, updateMsg}: ThreadListProps){
     const [threadList, setThreadList] = useState<Thread[]>([]);
     const [underlineThread, setUnderlinedThread] = useState(NULL_ID);
 
@@ -36,6 +37,16 @@ function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
         const txt_response = await loadTxt(currentTxtFile);
 
         updateMsg(txt_response);
+    }
+
+    function filterThreadsByDate(threads: Thread[]){
+        return threads.filter(thread => {
+            let threadDate = new Date(thread.date || "");
+
+            if (!isNaN(threadDate.getTime())){
+                return threadDate <= currentDate;
+            }
+        });
     }
 
     if (selectedTab === PERSONAL){
@@ -49,13 +60,15 @@ function LS_ThreadList({selectedTab, updateMsg}: ThreadListProps){
     useEffect(() => {
         async function updateThreads(){
             const thread_data = await thread_load(currentThread);
-            setThreadList(thread_data);
+            let filteredThreads = filterThreadsByDate(thread_data);
+
+            setThreadList(filteredThreads);
             updateMsg(NULL_MSG);
             setUnderlinedThread(NULL_ID);
         }
 
         updateThreads();
-    }, [currentThread]);
+    }, [currentThread, currentDate]);
 
     return (
         <>

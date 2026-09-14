@@ -14,6 +14,7 @@ const STATUS: string = "<STATUS>";
 const CLASSIFCATION: string = "<CLASSIFICATION>";
 const DESCRIPTION: string = "<DESCRIPTION>";
 const PROTOCAL: string = "<PROTOCAL>";
+const DIB: string = "<DIB>";
 const LIST_TITLE: string = "<LIST_TITLE>";
 const LIST_ITEM: string = "<L_I>";
 const BREAK: string = "<BREAK>";
@@ -138,6 +139,15 @@ function RS_ThreadViewer({displayMessage, tabTyping}: ThreadViewerProps){
                                 <>
                                     <div>
                                         <h4><u>{"Response / Containment Protocals: " + trimmed_line}</u></h4>
+                                    </div>
+                                </>
+                            )
+                        } else if (trimmed_line.startsWith(DIB)){
+                            trimmed_line = trimmed_line.substring(DIB.length);
+                            return (
+                                <>
+                                    <div>
+                                        <h4><u>{"D.I.B: " + trimmed_line}</u></h4>
                                     </div>
                                 </>
                             )

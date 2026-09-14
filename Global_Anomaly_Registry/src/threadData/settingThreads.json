@@ -3,36 +3,42 @@
         "id": 6,
         "title" : "Profile",
         "file_title": "profile",
+        "date": "08/13/1985",
         "status" : "UNREAD" 
     },
     {
         "id": 5,
         "title" : "Careers",
         "file_title": "careers",
+        "date": "08/13/1985",
         "status" : "UNREAD" 
     },
     {
         "id": 4,
         "title" : "Classifications",
         "file_title": "classification",
+        "date": "08/13/1985",
         "status" : "UNREAD" 
     },
     {
         "id": 3,
         "title" : "Anomaly Related Warnings",
         "file_title": "warnings",
+        "date": "08/13/1985",
         "status" : "UNREAD" 
     },
     {
         "id" : 2,
         "title" : "Support Contacts",
         "file_title": "contacts",
+        "date": "08/13/1985",
         "status" : "UNREAD"
     },
     {
         "id" : 1,
         "title" : "Policies and Code of Conduct",
         "file_title": "code_of_conduct",
+        "date": "08/13/1985",
         "status" : "UNREAD"
     }
 ]

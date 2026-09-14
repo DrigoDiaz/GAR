@@ -8,7 +8,7 @@ const MISC_FILE = "../threadData/misc.json";
 const userInputs = import.meta.glob("../threadData/misc.json");
 
 interface CommandPromptProps{
-  currentDate: (curDate: string) => void;
+  currentDate: (curDate: Date) => void;
 }
 
 async function checkInputs(){
@@ -36,9 +36,10 @@ function CommandPrompt({currentDate}: CommandPromptProps){
         const promptData = await checkInputs();
 
         for (const item of promptData){
-            if (item.userPrompt === givenCommand){
-                let dateOnly = givenCommand.split(" ")[1];
-                currentDate(dateOnly);
+            if (item.prompt === givenCommand){
+                let parsedDate = givenCommand.split(" ")[1];
+                let convertedDate = new Date(parsedDate);
+                currentDate(convertedDate);
                 setCommand("");
                 closePrompt();
                 break;

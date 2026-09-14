@@ -16,7 +16,7 @@ const INT_FOLDER_PATH: string = "../threadMessages/";
 const P_MESSAGES: string = "personalMessages/";
 const E_MESSAGES: string = "entryMessages/";
 const S_MESSAGES: string = "settingMessages/";
-let curDate: string = "08/13/1985";
+let curDate: Date = new Date("08/13/1985");
 
 const txtFiles = import.meta.glob("../threadMessages/**/*.txt", {
     query: "?raw", import: "default"
@@ -66,7 +66,8 @@ function HomePage() {
 
         <main id='setMain'>
           <section id='sectionBorder'>
-            <LS_ThreadList selectedTab={tabId} updateMsg={setMsg}></LS_ThreadList>
+            <LS_ThreadList selectedTab={tabId} currentDate={currentDay}
+            updateMsg={setMsg}></LS_ThreadList>
           </section>
 
           <aside id='asideBorder'>

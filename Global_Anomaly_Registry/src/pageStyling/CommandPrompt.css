@@ -59,7 +59,7 @@
 
 .promptAnimation{
     overflow: hidden;
-    animation: old_reveal 5s steps(7) forwards;
+    animation: old_reveal 3s steps(6) forwards;
 }
 
 #adjustDialog::backdrop{

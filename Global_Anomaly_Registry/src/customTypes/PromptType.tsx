@@ -1,3 +1,3 @@
 export interface Prompt{
-    userPrompt: string;
+    prompt: string;
 }

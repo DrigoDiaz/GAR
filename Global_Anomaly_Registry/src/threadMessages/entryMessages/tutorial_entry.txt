@@ -14,10 +14,18 @@ Status required here.
 <BREAK>
 
 <DESCRIPTION> 
-Description of anomaly will be required here.
+Provide a detailed description of the anomaly, its properties and normal behavior 
+within this section.
 <BREAK>
 
 <PROTOCAL> 
-All possible protocals for the anomaly will be required here.
+Document all current response and containment protocals that have been approved or shown
+to be effective on the anomaly.
+<BREAK>
+
+<DIB>
+This section is usually left as 'N/A,' however, fill this section out if the observed
+anomaly's behavior begins to differ while in the presence of a Disruptor. 
+<BREAK>
 
 <END>
